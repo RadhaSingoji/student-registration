@@ -33,7 +33,11 @@
 <body>
     <h2 style="text-align:center;">Add New Student</h2>
     
+    
     <form th:action="@{/students/save}" th:object="${student}" method="post">
+    
+         <input type="hidden" th:field="*{id}" />
+    
         <label>Name:</label>
         <input type="text" th:field="*{name}" required/>
         
